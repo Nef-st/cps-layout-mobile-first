@@ -5,8 +5,7 @@
 @import './blocks/button.scss';
 
 @import '../fonts/fonts.css';
-
-$bgColorMain: #f8f8f8;
+@import './var.scss';
 
 body {
   margin: 0;
