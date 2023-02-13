@@ -1,0 +1,26 @@
+$colorTextMain: #1b1c21;
+
+.main {
+  &__header {
+    position: relative;
+    margin: 24px 0;
+    padding-left: 16px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 40px;
+      background: #41f6d7;
+      border-radius: 0 4px 4px 0;
+    }
+    &--text {
+      margin: 0;
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: -0.6px;
+      color: $colorTextMain;
+    }
+  }
+}
