@@ -1,0 +1,23 @@
+$bgColorButton: #ff3e79;
+
+.button {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  &--name {
+    &--burger {
+      background: $bgColorButton url('../img/button-burger.svg') no-repeat 50%
+        50%;
+    }
+    &--repair {
+      background: $bgColorButton url('../img/button-repair.svg') no-repeat 50%
+        50%;
+    }
+    &--checkstatus {
+      background: $bgColorButton url('../img/button-checkstatus.svg') no-repeat
+        50% 50%;
+    }
+  }
+}

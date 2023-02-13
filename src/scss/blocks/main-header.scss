@@ -1,0 +1,22 @@
+$bgColorAdditional: #ffffff;
+
+.main-header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: $bgColorAdditional;
+  .button--name--repair {
+    margin-right: 16px;
+    margin-left: 20px;
+  }
+  &__logo {
+    margin: 0 auto;
+  }
+  &__divider {
+    width: 2px;
+    height: 32px;
+    background: #eaeaea;
+    border-radius: 1px;
+  }
+}
