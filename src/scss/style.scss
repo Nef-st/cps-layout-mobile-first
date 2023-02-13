@@ -2,11 +2,16 @@
 @import './blocks/main.scss';
 @import './blocks/main-nav.scss';
 @import './blocks/about-us.scss';
+@import './blocks/section-header.scss';
+@import './blocks/brands.scss';
 @import './blocks/button.scss';
 
 @import '../fonts/fonts.css';
 @import './var.scss';
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'TT Lakes', sans-serif;

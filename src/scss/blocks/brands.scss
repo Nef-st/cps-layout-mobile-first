@@ -1,0 +1,44 @@
+@import '../var.scss';
+
+.brands {
+  position: relative;
+  &__list {
+    display: flex;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    li:first-child {
+      margin-left: 16px;
+    }
+    li {
+      margin-right: 16px;
+    }
+    &--link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 240px;
+      height: 72px;
+      padding: 16px;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+    }
+  }
+  &__fade {
+    position: absolute;
+    top: 92px;
+    right: 0;
+    height: 80px;
+    width: 24px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+}
