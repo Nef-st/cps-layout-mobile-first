@@ -1,0 +1,17 @@
+$textColorMain: #1b1c21;
+
+.about-us {
+  margin-bottom: 24px;
+  &__button {
+    margin: 16px 0;
+  }
+  &--text {
+    padding: 0 16px;
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: $textColorMain;
+    }
+  }
+}

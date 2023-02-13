@@ -4,8 +4,10 @@ $textColorAdditional: #7e7e82;
 
 .main-nav {
   position: relative;
+  margin: 24px 0;
   &__link-list {
     height: 40px;
+    margin: 0;
     display: flex;
     overflow: scroll;
     -ms-overflow-style: none;
