@@ -1,0 +1,53 @@
+$bgColorAdditional: #ffffff;
+$colorBorder: #b8ffec;
+$textColorAdditional: #7e7e82;
+
+.main-nav {
+  position: relative;
+  &__link-list {
+    height: 40px;
+    display: flex;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  li:first-child {
+    margin-left: 16px;
+  }
+  &__link {
+    display: block;
+    width: 246px;
+    height: 40px;
+    padding: 8px 13px;
+    text-decoration: none;
+    box-sizing: border-box;
+    &--active {
+      background-color: #fff;
+      border: 2px solid $colorBorder;
+      border-radius: 6px;
+    }
+    &--text {
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: $textColorAdditional;
+    }
+  }
+  &__fade {
+    position: absolute;
+    width: 24px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+}

@@ -1,4 +1,4 @@
-$colorTextMain: #1b1c21;
+$textColorMain: #1b1c21;
 
 .main {
   &__header {
@@ -20,7 +20,7 @@ $colorTextMain: #1b1c21;
       font-size: 28px;
       line-height: 40px;
       letter-spacing: -0.6px;
-      color: $colorTextMain;
+      color: $textColorMain;
     }
   }
 }
