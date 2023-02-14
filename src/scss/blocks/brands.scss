@@ -2,11 +2,17 @@
 
 .brands {
   position: relative;
+  &__slider {
+    input[type='radio'] {
+      display: none;
+    }
+  }
   &__list {
     display: flex;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    transition: transform 0.8s ease;
     &::-webkit-scrollbar {
       width: 0;
       height: 0;
@@ -17,6 +23,7 @@
     li {
       margin-right: 16px;
     }
+
     &--link {
       display: flex;
       align-items: center;
