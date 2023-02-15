@@ -6,7 +6,6 @@
   width: 40px;
   height: 40px;
   padding: 0;
-
   &--name {
     &--burger {
       border-radius: 50%;
@@ -36,6 +35,25 @@
         line-height: 24px;
         letter-spacing: -0.2px;
         color: $textColorMain;
+      }
+    }
+    &--order {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: pink;
+      padding: 4px;
+      padding-left: 12px;
+      width: 119px;
+      height: 32px;
+      background-color: $bgColorButton;
+      border-radius: 16px;
+      p {
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        color: $textColorOrder;
       }
     }
   }

@@ -2,12 +2,11 @@
 
 .section-header {
   display: flex;
-  height: 80px;
   padding: 16px;
   align-items: center;
   margin-bottom: 16px;
   background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
-  box-sizing: border-box;
+  box-sizing: content-box;
   &--text {
     font-size: 16px;
     line-height: 24px;

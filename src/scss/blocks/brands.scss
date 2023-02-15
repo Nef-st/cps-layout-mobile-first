@@ -1,6 +1,7 @@
 @import '../var.scss';
 
 .brands {
+  margin-bottom: 24px;
   &__list {
     display: flex;
     overflow: scroll;
@@ -25,8 +26,8 @@
       width: 240px;
       height: 72px;
       padding: 16px;
-      background: #ffffff;
-      border: 1px solid #eaeaea;
+      background: $bgColorAdditional;
+      border: 1px solid $colorBorderSlider;
       border-radius: 6px;
     }
   }

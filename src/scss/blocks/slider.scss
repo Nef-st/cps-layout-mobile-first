@@ -1,6 +1,5 @@
 .slider {
   position: relative;
-  margin-bottom: 24px;
 
   input[type='radio'] {
     display: none;
@@ -47,6 +46,10 @@
       }
       &--technique {
         height: 160px;
+        width: 24px;
+      }
+      &--price {
+        height: 200px;
         width: 24px;
       }
     }
