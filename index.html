@@ -71,7 +71,7 @@
             </button>
           </div>
 
-          <img class="about-us__img" width="320px" height="176px" src="./img/logo-photo.png" alt="photo">
+          <img class="about-us__img" width="100%" height="auto" src="./img/logo-photo.png" alt="photo">
         </section>
         <section class="brands">
           <header class="section-header">
@@ -79,79 +79,154 @@
               Ремонт техники различных брендов
             </p>
           </header>
+          <div class="slider brands__slider">
+            <ul class="brands__list">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-lenovo.png" alt="logo" class="brands__list--logo">
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-          <ul class="brands__list">
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-lenovo.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-samsung.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-samsung.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-apple.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-apple.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-view-sonic.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-view-sonic.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-bosch.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-bosch.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-hp.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-hp.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-acer.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-acer.png" alt="logo" class="brands__list--logo">
+              <li class="brands__list--item">
+                <a class="brands__list--link" href="#">
+                  <img src="./img/logo-sony.png" alt="logo" class="brands__list--logo">
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
+            </ul>
+            <input type="radio" id="btn-1" name="toggle" checked="checked">
+            <input type="radio" id="btn-2" name="toggle">
+            <input type="radio" id="btn-3" name="toggle">
+            <input type="radio" id="btn-4" name="toggle">
+            <input type="radio" id="btn-5" name="toggle">
+            <input type="radio" id="btn-6" name="toggle">
+            <input type="radio" id="btn-7" name="toggle">
+            <input type="radio" id="btn-8" name="toggle">
+            <input type="radio" id="btn-9" name="toggle">
+            <div class="slider__controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+              <label for="btn-3"></label>
+              <label for="btn-4"></label>
+              <label for="btn-5"></label>
+              <label for="btn-6"></label>
+              <label for="btn-7"></label>
+              <label for="btn-8"></label>
+              <label for="btn-9"></label>
+            </div>
+            <div class="slider__fade slider__fade--mode--brands"></div>
+          </div>
+        </section>
+        <section class="technique">
+          <header class="section-header">
+            <p class="section-header--text"> Ремонт различных видов техники </p>
+          </header>
+          <div class="slider">
+            <ul class="technique__list">
+              <li class="technique__list--item">
+                <a href="#" class="technique__list--link">
+                  <p class="technique__list--text"> Ремонт ноутбуков </p>
 
-            <li class="brands__list--item">
-              <a class="brands__list--link" href="#">
-                <img src="./img/logo-sony.png" alt="logo" class="brands__list--logo">
+                  <img width="40px" height="40px" src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-                <img src="./img/button-go.svg" alt="go">
-              </a>
-            </li>
-          </ul>
-          <div class="brands__fade"></div>
+              <li class="technique__list--item">
+                <a href="#" class="technique__list--link">
+                  <p class="technique__list--name"> Ремонт планшетов </p>
 
-          <button class="button button--name--read-more">
-            <img wight="24px" height="24px" src="./img/button-expand.svg" alt="|">
+                  <img width="40px" height="40px" src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
 
-            <p> Читать далее </p>
-          </button>
+              <li class="technique__list--item">
+                <a href="#" class="technique__list--link">
+                  <p class="technique__list--name"> Ремонт ПК </p>
+
+                  <img width="40px" height="40px" src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
+
+              <li class="technique__list--item">
+                <a href="#" class="technique__list--link">
+                  <p class="technique__list--name"> Ремонт мониторов </p>
+
+                  <img width="40px" height="40px" src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
+            </ul>
+            <input type="radio" id="btn-1" name="toggle" checked="checked">
+            <input type="radio" id="btn-2" name="toggle">
+            <input type="radio" id="btn-3" name="toggle">
+            <input type="radio" id="btn-4" name="toggle">
+            <input type="radio" id="btn-5" name="toggle">
+            <input type="radio" id="btn-6" name="toggle">
+            <input type="radio" id="btn-7" name="toggle">
+            <input type="radio" id="btn-8" name="toggle">
+            <input type="radio" id="btn-9" name="toggle">
+            <div class="slider__controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+              <label for="btn-3"></label>
+              <label for="btn-4"></label>
+              <label for="btn-5"></label>
+              <label for="btn-6"></label>
+              <label for="btn-7"></label>
+              <label for="btn-8"></label>
+              <label for="btn-9"></label>
+            </div>
+            <div class="slider__fade slider__fade--mode--technique"></div>
+          </div>
         </section>
       </main>
     </div>

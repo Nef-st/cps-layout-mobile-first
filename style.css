@@ -142,31 +142,12 @@
   color: #1b1c21;
 }
 
-.section-header {
-  display: flex;
-  height: 80px;
-  padding: 16px;
-  align-items: center;
-  margin-bottom: 16px;
-  background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
-  box-sizing: border-box;
-}
-.section-header--text {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-transform: uppercase;
-  color: #7e7e82;
-}
-
-.brands {
-  position: relative;
-}
 .brands__list {
   display: flex;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  transition: transform 0.8s ease;
 }
 .brands__list::-webkit-scrollbar {
   width: 0;
@@ -189,13 +170,108 @@
   border: 1px solid #eaeaea;
   border-radius: 6px;
 }
-.brands__fade {
+
+.technique__list {
+  display: flex;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: transform 0.8s ease;
+}
+.technique__list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.technique__list li:first-child {
+  margin-left: 16px;
+}
+.technique__list li {
+  margin-right: 16px;
+}
+.technique__list--text {
+  font-family: "TT Lakes";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+}
+.technique__list--link {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 240px;
+  height: 160px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.technique__list--link img {
+  margin-top: auto;
+}
+
+.section-header {
+  display: flex;
+  height: 80px;
+  padding: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+  box-sizing: border-box;
+}
+.section-header--text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7e7e82;
+}
+
+.slider {
+  position: relative;
+  margin-bottom: 24px;
+}
+.slider input[type=radio] {
+  display: none;
+}
+.slider #btn-1:checked ~ .slider__controls label[for=btn-1],
+.slider #btn-2:checked ~ .slider__controls label[for=btn-2],
+.slider #btn-3:checked ~ .slider__controls label[for=btn-3],
+.slider #btn-4:checked ~ .slider__controls label[for=btn-4],
+.slider #btn-5:checked ~ .slider__controls label[for=btn-5],
+.slider #btn-6:checked ~ .slider__controls label[for=btn-6],
+.slider #btn-7:checked ~ .slider__controls label[for=btn-7],
+.slider #btn-8:checked ~ .slider__controls label[for=btn-8],
+.slider #btn-9:checked ~ .slider__controls label[for=btn-9] {
+  background-color: #b5b6bc;
+}
+.slider__controls {
+  text-align: center;
+}
+.slider__controls label {
+  display: inline-block;
+  margin: 0 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.slider__fade {
   position: absolute;
-  top: 92px;
+  top: 0;
   right: 0;
+  background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
+.slider__fade--mode--brands {
   height: 80px;
   width: 24px;
-  background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
+.slider__fade--mode--technique {
+  height: 160px;
+  width: 24px;
 }
 
 .button {
