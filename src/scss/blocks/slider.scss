@@ -1,5 +1,10 @@
 .slider {
   position: relative;
+  margin-bottom: 24px;
+
+  input[type='radio'] {
+    display: none;
+  }
 
   #btn-1:checked ~ .slider__controls label[for='btn-1'],
   #btn-2:checked ~ .slider__controls label[for='btn-2'],
@@ -14,7 +19,6 @@
   }
 
   &__controls {
-    margin-bottom: 10px;
     text-align: center;
     label {
       display: inline-block;
@@ -25,6 +29,26 @@
       background-color: #dddddd;
       cursor: pointer;
       transition: background-color 0.2s;
+    }
+  }
+  &__fade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    &--mode {
+      &--brands {
+        height: 80px;
+        width: 24px;
+      }
+      &--technique {
+        height: 160px;
+        width: 24px;
+      }
     }
   }
 }
