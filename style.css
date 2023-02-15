@@ -40,6 +40,7 @@
   align-items: center;
   padding: 0 16px;
   background-color: #ffffff;
+  border-bottom: 1px solid #d9fff5;
 }
 .header .button--name--repair {
   margin-right: 16px;
@@ -142,6 +143,9 @@
   color: #1b1c21;
 }
 
+.brands {
+  margin-bottom: 24px;
+}
 .brands__list {
   display: flex;
   overflow: scroll;
@@ -171,6 +175,9 @@
   border-radius: 6px;
 }
 
+.technique {
+  margin-bottom: 24px;
+}
 .technique__list {
   display: flex;
   overflow: scroll;
@@ -211,14 +218,128 @@
   margin-top: auto;
 }
 
+.price {
+  margin-bottom: 40px;
+}
+.price__list {
+  display: flex;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: transform 0.8s ease;
+}
+.price__list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.price__list li:first-child {
+  margin-left: 16px;
+}
+.price__list li {
+  margin-right: 16px;
+}
+.price__list--text {
+  font-family: "TT Lakes";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+}
+.price__list--header {
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+  margin-bottom: 4px;
+}
+.price__list--description {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+  margin-bottom: 16px;
+}
+.price__list--description:last-child {
+  margin: 0;
+}
+.price__list--button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+.price__list--link {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 200px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.price__list--link img {
+  margin-top: auto;
+}
+.price__offer {
+  margin-top: 16px;
+  width: 100%;
+}
+.price__offer--text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+  margin: 0 16px;
+  margin-bottom: 16px;
+}
+.price__offer--link {
+  position: relative;
+  display: block;
+  width: 60%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  text-decoration: none;
+  margin: 0 16px;
+}
+.price__offer--link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -24px;
+  width: 24px;
+  height: 24px;
+  background: url(./static/button-more.svg) no-repeat 50% 50%;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 17px;
+}
+.footer p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+}
+.footer p:last-child {
+  margin-bottom: 19px;
+}
+
 .section-header {
   display: flex;
-  height: 80px;
   padding: 16px;
   align-items: center;
   margin-bottom: 16px;
   background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 .section-header--text {
   font-size: 16px;
@@ -230,7 +351,6 @@
 
 .slider {
   position: relative;
-  margin-bottom: 24px;
 }
 .slider input[type=radio] {
   display: none;
@@ -273,6 +393,10 @@
   height: 160px;
   width: 24px;
 }
+.slider__fade--mode--price {
+  height: 200px;
+  width: 24px;
+}
 
 .button {
   cursor: pointer;
@@ -308,6 +432,25 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1b1c21;
+}
+.button--name--order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  padding: 4px;
+  padding-left: 12px;
+  width: 119px;
+  height: 32px;
+  background-color: #ff3e79;
+  border-radius: 16px;
+}
+.button--name--order p {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 * {
