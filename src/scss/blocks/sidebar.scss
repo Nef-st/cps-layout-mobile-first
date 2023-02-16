@@ -2,10 +2,22 @@
 
 .sidebar {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 360px;
+  background-color: $bgColorAdditional;
+  transition: transform 0.5s;
+  transform: translateX(-360px);
+  &--open {
+    display: block;
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 360px;
+    & ~ .container {
+      transition: transform 0.5s;
+      display: none;
+    }
+  }
   &__header {
     display: flex;
     justify-content: space-between;
