@@ -36,10 +36,21 @@
 
 .sidebar {
   position: absolute;
+  background-color: #ffffff;
+  transition: transform 0.5s;
+  transform: translateX(-360px);
+}
+.sidebar--open {
+  display: block;
+  transform: translateX(0);
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 360px;
+}
+.sidebar--open ~ .container {
+  display: none;
 }
 .sidebar__header {
   display: flex;
