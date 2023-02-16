@@ -34,6 +34,96 @@
   font-style: normal;
 }
 
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 360px;
+}
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 88px;
+}
+.sidebar__header--left {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 17px;
+       column-gap: 17px;
+}
+.sidebar__nav .link-list__item {
+  position: relative;
+}
+.sidebar__nav .link-list__item > a {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  display: block;
+  padding: 14px;
+  padding-left: 28px;
+  text-decoration: none;
+}
+.sidebar__nav .link-list__item.active > a {
+  color: #7e7e82;
+}
+.sidebar__nav .link-list__item.active:before {
+  position: absolute;
+  top: 20%;
+  content: "";
+  width: 4px;
+  height: 60%;
+  border-radius: 2px;
+  background-color: #41f6d7;
+}
+.sidebar__footer {
+  padding-left: 20px;
+}
+.sidebar__footer--email {
+  font-family: "TT Lakes";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  margin-bottom: 12px;
+}
+.sidebar__footer--number {
+  font-family: "TT Lakes";
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #1b1c21;
+  margin-bottom: 40px;
+}
+
+.messenger {
+  display: flex;
+  padding: 0;
+}
+.messenger li .button {
+  margin-right: 14px;
+}
+
+.language {
+  display: flex;
+  padding: 0;
+  font-family: "TT Lakes";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+.language__button.active > a {
+  color: #7e7e82;
+}
+.language__button > a {
+  color: #1b1c21;
+  margin-right: 3.5px;
+  text-decoration: none;
+}
+
 .header {
   height: 88px;
   display: flex;
@@ -410,6 +500,26 @@
 .button--name--burger {
   border-radius: 50%;
   background: #ff3e79 url(./static/button-burger.svg) no-repeat 50% 50%;
+}
+.button--name--close {
+  border-radius: 50%;
+  background: #ff3e79 url(./static/button-close.svg) no-repeat 50% 50%;
+}
+.button--name--search {
+  border-radius: 50%;
+  background: #ff3e79 url(./static/button-search.svg) no-repeat 50% 50%;
+}
+.button--name--phone {
+  border-radius: 50%;
+  background: #ff3e79 url(./static/button-phone.svg) no-repeat 50% 50%;
+}
+.button--name--chat {
+  border-radius: 50%;
+  background: #ff3e79 url(./static/button-chat.svg) no-repeat 50% 50%;
+}
+.button--name--profile {
+  border-radius: 50%;
+  background: #ff3e79 url(./static/button-profile.svg) no-repeat 50% 50%;
 }
 .button--name--repair {
   border-radius: 50%;
