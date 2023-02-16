@@ -12,6 +12,30 @@
       background: $bgColorButton url('../img/button-burger.svg') no-repeat 50%
         50%;
     }
+    &--close {
+      border-radius: 50%;
+      background: $bgColorButton url('../img/button-close.svg') no-repeat 50%
+        50%;
+    }
+    &--search {
+      border-radius: 50%;
+      background: $bgColorButton url('../img/button-search.svg') no-repeat 50%
+        50%;
+    }
+    &--phone {
+      border-radius: 50%;
+      background: $bgColorButton url('../img/button-phone.svg') no-repeat 50%
+        50%;
+    }
+    &--chat {
+      border-radius: 50%;
+      background: $bgColorButton url('../img/button-chat.svg') no-repeat 50% 50%;
+    }
+    &--profile {
+      border-radius: 50%;
+      background: $bgColorButton url('../img/button-profile.svg') no-repeat 50%
+        50%;
+    }
     &--repair {
       border-radius: 50%;
       background: $bgColorButton url('../img/button-repair.svg') no-repeat 50%

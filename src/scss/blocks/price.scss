@@ -75,9 +75,7 @@
       margin-bottom: 16px;
     }
     &--link {
-      position: relative;
       display: block;
-      width: 60%;
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
@@ -85,14 +83,18 @@
       color: $textColorMain;
       text-decoration: none;
       margin: 0 16px;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: -24px;
-        width: 24px;
-        height: 24px;
-        background: url(../img/button-more.svg) no-repeat 50% 50%;
+      span {
+        position: relative;
+        width: 60%;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: -24px;
+          width: 24px;
+          height: 24px;
+          background: url(../img/button-more.svg) no-repeat 50% 50%;
+        }
       }
     }
   }
