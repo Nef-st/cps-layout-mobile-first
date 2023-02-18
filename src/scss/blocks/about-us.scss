@@ -1,17 +1,39 @@
 @import '../var.scss';
 
 .about-us {
+  position: relative;
   margin-bottom: 24px;
+  padding: 0 16px;
+
+  @media (min-width: 768px) {
+    height: 208px;
+    display: flex;
+    column-gap: 6%;
+    &--text {
+      min-width: 312px;
+      width: 47%;
+    }
+    &--img {
+      min-width: 360px;
+      width: auto;
+    }
+  }
   &__button {
-    margin: 16px 0;
+    position: absolute;
+    left: 16px;
+    bottom: 0;
   }
   &--text {
-    padding: 0 16px;
+    height: calc(100% - 48px);
+    overflow-y: hidden;
     p {
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.2px;
       color: $textColorMain;
+      @media (min-width: 768px) {
+        line-height: 20px;
+      }
     }
   }
 }
