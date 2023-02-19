@@ -36,6 +36,9 @@
 
 .sidebar {
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
   background-color: #ffffff;
   transition: transform 0.5s;
   transform: translateX(-360px);
@@ -46,11 +49,29 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  max-width: 360px;
+  width: 320px;
+}
+@media (max-width: 360px) {
+  .sidebar--open {
+    width: 100%;
+  }
 }
 .sidebar--open ~ .container {
-  display: none;
+  height: 730px;
+  overflow: hidden;
+}
+.sidebar--open ~ .container .header__logo {
+  width: 0;
+}
+.sidebar--open ~ .sidebar__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 730px;
+  z-index: 2;
+  background-color: #ffffff;
+  opacity: 0.9;
 }
 .sidebar__header {
   display: flex;
@@ -99,7 +120,7 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1b1c21;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .sidebar__footer--number {
   font-family: "TT Lakes";
@@ -136,7 +157,12 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   height: 88px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -148,7 +174,14 @@
   margin-left: 20px;
 }
 .header__logo {
-  margin: 0 auto;
+  margin: 0;
+  margin-left: 16px;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    margin-left: 0;
+  }
 }
 .header__divider {
   width: 2px;
@@ -156,7 +189,19 @@
   background: #eaeaea;
   border-radius: 1px;
 }
+.header__divider--left {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__divider--left {
+    display: block;
+    margin: 0 20px;
+  }
+}
 
+.main {
+  margin-top: 120px;
+}
 .main__header {
   position: relative;
   margin: 24px 0;
@@ -229,13 +274,34 @@
 }
 
 .about-us {
+  position: relative;
   margin-bottom: 24px;
+  padding: 0 16px;
+}
+@media (min-width: 768px) {
+  .about-us {
+    height: 208px;
+    display: flex;
+    -moz-column-gap: 6%;
+         column-gap: 6%;
+  }
+  .about-us--text {
+    min-width: 312px;
+    width: 47%;
+  }
+  .about-us--img {
+    min-width: 360px;
+    width: auto;
+  }
 }
 .about-us__button {
-  margin: 16px 0;
+  position: absolute;
+  left: 16px;
+  bottom: 0;
 }
 .about-us--text {
-  padding: 0 16px;
+  height: calc(100% - 48px);
+  overflow-y: hidden;
 }
 .about-us--text p {
   font-size: 14px;
@@ -243,37 +309,14 @@
   letter-spacing: 0.2px;
   color: #1b1c21;
 }
+@media (min-width: 768px) {
+  .about-us--text p {
+    line-height: 20px;
+  }
+}
 
 .brands {
   margin-bottom: 24px;
-}
-.brands__list {
-  display: flex;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  transition: transform 0.8s ease;
-}
-.brands__list::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-.brands__list li:first-child {
-  margin-left: 16px;
-}
-.brands__list li {
-  margin-right: 16px;
-}
-.brands__list--link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 240px;
-  height: 72px;
-  padding: 16px;
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
 }
 
 .technique {
@@ -454,6 +497,7 @@
 
 .slider {
   position: relative;
+  overflow: hidden;
 }
 .slider input[type=radio] {
   display: none;
@@ -468,6 +512,35 @@
 .slider #btn-8:checked ~ .slider__controls label[for=btn-8],
 .slider #btn-9:checked ~ .slider__controls label[for=btn-9] {
   background-color: #b5b6bc;
+}
+.slider__button {
+  position: absolute;
+  background-color: red;
+  opacity: 0.3;
+  width: 50%;
+  height: 104px;
+}
+.slider__button--next {
+  left: 50%;
+}
+.slider__list {
+  display: flex;
+  position: relative;
+  transition: all ease 0.5s;
+}
+.slider__item {
+  margin: 0 8px;
+}
+.slider__item--brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 240px;
+  height: 72px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
 }
 .slider__controls {
   text-align: center;
@@ -543,7 +616,8 @@
 .button--name--read-more {
   display: flex;
   align-items: center;
-  width: 100%;
+  height: 48px;
+  width: 132px;
   -moz-column-gap: 8px;
        column-gap: 8px;
   border: 0;

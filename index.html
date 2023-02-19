@@ -87,11 +87,13 @@
         </ul>
       </footer>
     </aside>
+    <div class="sidebar__background"></div>
     <div class="container">
       <header class="header">
         <div class="button button--name--burger" id="button-burger"></div>
+        <div class="header__divider header__divider--left"></div>
         <img src="./img/logo.svg" alt="logo" class="header__logo" width="96px" height="50px">
-        <div class="header__divider"></div>
+        <div class="header__divider header__divider--right"></div>
         <a href="#" class="button button--name--repair"></a>
         <a href="#" class="button button--name--checkstatus"></a>
       </header>
@@ -141,17 +143,22 @@
               Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
               официальной гарантией производителя.
             </p>
+            <br>
+            <p>
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.
+            </p>
 
-            
-
-            <button class="about-us__button button button--name--read-more">
+            <div class="about-us__button button button--name--read-more">
               <img wight="24px" height="24px" src="./img/button-expand.svg" alt="|">
 
               <p> Читать далее </p>
-            </button>
+            </div>
           </div>
 
-          <img class="about-us__img" width="100%" height="auto" src="./img/logo-photo.png" alt="photo">
+          <img class="about-us--img" width="100%" height="auto" src="./img/logo-photo.png" alt="photo">
         </section>
         <section class="brands">
           <header class="section-header">
@@ -159,66 +166,68 @@
               Ремонт техники различных брендов
             </p>
           </header>
-          <div class="slider brands__slider">
-            <ul class="brands__list">
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-lenovo.png" alt="logo" class="brands__list--logo">
+          <div class="slider">
+            <div class="slider__button slider__button--prev"></div>
+            <div class="slider__button slider__button--next"></div>
+            <ul class="slider__list slider__list--brands">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-lenovo.png" alt="logo">
                   <img src="./img/button-go.svg" alt="go">
                 </a>
               </li>
 
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-samsung.png" alt="logo" class="brands__list--logo">
-
-                  <img src="./img/button-go.svg" alt="go">
-                </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-apple.png" alt="logo" class="brands__list--logo">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-samsung.png" alt="logo">
 
                   <img src="./img/button-go.svg" alt="go">
                 </a>
               </li>
 
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-view-sonic.png" alt="logo" class="brands__list--logo">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-apple.png" alt="logo">
 
                   <img src="./img/button-go.svg" alt="go">
                 </a>
               </li>
 
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-bosch.png" alt="logo" class="brands__list--logo">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-view-sonic.png" alt="logo">
 
                   <img src="./img/button-go.svg" alt="go">
                 </a>
               </li>
 
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-hp.png" alt="logo" class="brands__list--logo">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-bosch.png" alt="logo">
 
                   <img src="./img/button-go.svg" alt="go">
                 </a>
               </li>
 
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-acer.png" alt="logo" class="brands__list--logo">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-hp.png" alt="logo">
 
                   <img src="./img/button-go.svg" alt="go">
                 </a>
               </li>
 
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
-                  <img src="./img/logo-sony.png" alt="logo" class="brands__list--logo">
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-acer.png" alt="logo">
+
+                  <img src="./img/button-go.svg" alt="go">
+                </a>
+              </li>
+
+              <li>
+                <a class="slider__item slider__item--brands" href="#">
+                  <img src="./img/logo-sony.png" alt="logo">
 
                   <img src="./img/button-go.svg" alt="go">
                 </a>
