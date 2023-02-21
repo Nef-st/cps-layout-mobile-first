@@ -19,9 +19,11 @@
     }
   }
   &__button {
-    position: absolute;
-    left: 16px;
-    bottom: 0;
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 16px;
+      bottom: 0;
+    }
   }
   &--text {
     height: calc(100% - 48px);

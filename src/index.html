@@ -8,6 +8,12 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>cps website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <aside class="sidebar" id="sidebar">
@@ -186,125 +192,100 @@
               Ремонт техники различных брендов
             </p>
           </header>
-          <div class="slider brands__slider">
-            <ul class="brands__list">
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+          <div class="brands__swiper--fade"></div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-lenovo.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
+
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-samsung.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-apple.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-view-sonic.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-bosch.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-hp.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-acer.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-
-              <li class="brands__list--item">
-                <a class="brands__list--link" href="#">
+              </div>
+              <div class="swiper-slide brands__slide">
+                <a class="brands__slide--link" href="#">
                   <img
                     src="./img/logo-sony.png"
                     alt="logo"
-                    class="brands__list--logo"
+                    class="brands__slide--logo"
                   />
 
                   <img src="./img/button-go.svg" alt="go" />
                 </a>
-              </li>
-            </ul>
-            <input type="radio" id="btn-1" name="toggle" checked />
-            <input type="radio" id="btn-2" name="toggle" />
-            <input type="radio" id="btn-3" name="toggle" />
-            <input type="radio" id="btn-4" name="toggle" />
-            <input type="radio" id="btn-5" name="toggle" />
-            <input type="radio" id="btn-6" name="toggle" />
-            <input type="radio" id="btn-7" name="toggle" />
-            <input type="radio" id="btn-8" name="toggle" />
-            <input type="radio" id="btn-9" name="toggle" />
-            <div class="slider__controls">
-              <label for="btn-1"></label>
-              <label for="btn-2"></label>
-              <label for="btn-3"></label>
-              <label for="btn-4"></label>
-              <label for="btn-5"></label>
-              <label for="btn-6"></label>
-              <label for="btn-7"></label>
-              <label for="btn-8"></label>
-              <label for="btn-9"></label>
+              </div>
             </div>
-            <div class="slider__fade slider__fade--mode--brands"></div>
           </div>
+          <div class="swiper-pagination brands__swiper--pagination"></div>
         </section>
         <section class="technique">
           <header class="section-header">
@@ -551,5 +532,18 @@
         </footer>
       </main>
     </div>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 16,
+        slidesPerView: 2, // this
+        slidesPerColumn: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        mousewheel: true,
+        keyboard: true
+      })
+    </script>
   </body>
 </html>

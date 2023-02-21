@@ -1,0 +1,16 @@
+.swiper {
+  padding-left: 16px;
+  width: 512px;
+  &-pagination {
+    position: absolute;
+    bottom: 0 !important;
+    &-bullet {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #dddddd;
+      transition: background-color 0.2s;
+    }
+  }
+}
