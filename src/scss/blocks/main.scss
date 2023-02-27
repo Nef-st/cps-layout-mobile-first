@@ -1,11 +1,15 @@
 @import '../var.scss';
 
 .main {
-  margin-top: 120px;
+  margin-top: 112px;
+  width: 100vw;
+  overflow: hidden;
+
   &__header {
     position: relative;
     margin: 24px 0;
     padding-left: 16px;
+
     &:before {
       content: '';
       position: absolute;
@@ -16,6 +20,7 @@
       background: #41f6d7;
       border-radius: 0 4px 4px 0;
     }
+
     &--text {
       margin: 0;
       font-size: 28px;

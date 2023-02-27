@@ -3,21 +3,23 @@
 .main-nav {
   position: relative;
   margin: 24px 0;
+
   &__link-list {
     height: 40px;
     margin: 0;
     display: flex;
-    overflow: scroll;
-    -ms-overflow-style: none;
+    overflow-x: scroll;
     scrollbar-width: none;
+    -ms-overflow-style: none;
     &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
+      display: none;
     }
   }
-  li:first-child {
+
+  li:first-of-type {
     margin-left: 16px;
   }
+
   &__link {
     display: block;
     width: 246px;
@@ -25,11 +27,13 @@
     padding: 8px 13px;
     text-decoration: none;
     box-sizing: border-box;
+
     &--active {
       background-color: #fff;
       border: 2px solid $colorBorder;
       border-radius: 6px;
     }
+
     &--text {
       text-align: center;
       font-size: 16px;
@@ -38,6 +42,7 @@
       color: $textColorAdditional;
     }
   }
+
   &__fade {
     position: absolute;
     width: 24px;

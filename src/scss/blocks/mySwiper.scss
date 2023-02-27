@@ -1,9 +1,11 @@
 .swiper {
+  position: relative;
   padding-left: 16px;
+  padding-bottom: 44px;
   width: 512px;
   &-pagination {
     position: absolute;
-    bottom: 0 !important;
+    bottom: 16px !important;
     &-bullet {
       display: inline-block;
       width: 12px;
