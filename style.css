@@ -493,14 +493,21 @@
 }
 
 .swiper {
-  position: relative;
   padding-left: 16px;
   padding-bottom: 44px;
   width: 512px;
 }
+.swiper--price-list {
+  width: 552px;
+}
 .swiper-pagination {
-  position: absolute;
-  bottom: 16px !important;
+  padding-left: 16px;
+  width: 100vw !important;
+}
+@media (min-width: 512px) {
+  .swiper-pagination {
+    width: 100% !important;
+  }
 }
 .swiper-pagination-bullet {
   display: inline-block;
