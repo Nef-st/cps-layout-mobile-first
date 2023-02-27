@@ -1,11 +1,16 @@
 .swiper {
-  position: relative;
   padding-left: 16px;
   padding-bottom: 44px;
   width: 512px;
+  &--price-list {
+    width: 552px;
+  }
   &-pagination {
-    position: absolute;
-    bottom: 16px !important;
+    padding-left: 16px;
+    width: 100vw !important;
+    @media (min-width: 512px) {
+      width: 100% !important;
+    }
     &-bullet {
       display: inline-block;
       width: 12px;
