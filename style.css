@@ -172,6 +172,15 @@
   background-color: #ffffff;
   border-bottom: 1px solid #d9fff5;
 }
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+}
+.header--content {
+  display: flex;
+  align-items: center;
+}
 .header .button--name--repair {
   margin: 0 16px 0 20px;
 }
@@ -281,7 +290,6 @@
 }
 @media (min-width: 768px) {
   .about-us {
-    height: 208px;
     display: flex;
     -moz-column-gap: 6%;
          column-gap: 6%;
@@ -293,7 +301,12 @@
   .about-us--img {
     min-width: 360px;
     width: auto;
+    object-fit: scale-down;
   }
+}
+.about-us__button__button.expanded img {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
 }
 @media (min-width: 768px) {
   .about-us__button {
@@ -303,8 +316,20 @@
   }
 }
 .about-us--text {
-  height: calc(100% - 48px);
+  max-height: 462px;
   overflow-y: hidden;
+}
+.about-us--text .hidden-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.about-us--text .hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.about-us--text .hidden.show {
+  opacity: 1;
 }
 .about-us--text p {
   font: 14px/18px 0.2px #1b1c21;
@@ -331,7 +356,7 @@
   height: 72px;
   background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%);
 }
-.brands__slide--link {
+.brands__item--link {
   width: 240px;
   height: 72px;
   box-sizing: border-box;
@@ -492,30 +517,43 @@
   color: #7e7e82;
 }
 
-.swiper {
-  padding-left: 16px;
-  padding-bottom: 44px;
-  width: 512px;
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
-.swiper--price-list {
-  width: 552px;
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
 }
-.swiper-pagination {
-  padding-left: 16px;
-  width: 100vw !important;
+
+.slider-item {
+  flex: 0 0 80%;
+  width: 100%;
+  box-sizing: border-box;
 }
-@media (min-width: 512px) {
-  .swiper-pagination {
-    width: 100% !important;
-  }
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin-top: 16px;
 }
-.swiper-pagination-bullet {
+
+.slider-dot {
+  cursor: pointer;
   display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: #dddddd;
   transition: background-color 0.2s;
+}
+.slider-dot.active {
+  background-color: #b5b6bc;
 }
 
 .button {
