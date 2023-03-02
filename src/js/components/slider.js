@@ -28,7 +28,7 @@ class Slider {
 
   moveSlider(index) {
     this.slider.style.transform = `translateX(-${index * this.slideWidth}px)`
-    this.dots.forEach((dot) = >dot.classList.remove('active'))
+    this.dots.forEach((dot) => dot.classList.remove('active'))
     this.dots[index].classList.add('active')
   }
 
@@ -49,14 +49,14 @@ class Slider {
 
   handleTouchEnd() {
     if (
-      this.touchStartX - this.touchEndX  >50 &&
+      this.touchStartX - this.touchEndX > 50 &&
       this.currentSlide < this.sliderItems.length - 1
     ) {
       this.currentSlide++
       this.moveSlider(this.currentSlide)
     } else if (
-      this.touchEndX - this.touchStartX  >50 &&
-      this.currentSlide  >0
+      this.touchEndX - this.touchStartX > 50 &&
+      this.currentSlide > 0
     ) {
       this.currentSlide--
       this.moveSlider(this.currentSlide)

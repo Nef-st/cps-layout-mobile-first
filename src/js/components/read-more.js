@@ -6,8 +6,8 @@ function readMore() {
   if (hiddenContainer.style.maxHeight) {
     hiddenContainer.style.maxHeight = null
     button.innerHTML =
-      '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/ ><p >Читать далее</p >'
-    hiddenElements.forEach((element) = >{
+      '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/><p>Читать далее</p>'
+    hiddenElements.forEach((element) => {
       element.style.opacity = 0
       element.style.transform = 'translateY(-10px)'
     })
@@ -15,8 +15,8 @@ function readMore() {
     hiddenContainer.style.maxHeight = 462 + 'px'
     hiddenContainer.style.height = 462 + 'px'
     button.innerHTML =
-      '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/ ><p >Свернуть</p >'
-    hiddenElements.forEach((element) = >{
+      '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/><p>Свернуть</p>'
+    hiddenElements.forEach((element) => {
       element.style.opacity = 1
       element.style.transform = 'translateY(0)'
     })
