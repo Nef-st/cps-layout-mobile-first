@@ -1,11 +1,9 @@
+import Slider from './components/slider'
+import './components/burger'
+import './components/read-more'
+
 import '../scss/style.scss'
 
-const btnBurger = document.getElementById('button-burger')
-const btnClose = document.getElementById('button-close')
-
-btnBurger.addEventListener('click', () => {
-  document.getElementById('sidebar').classList.add('sidebar--open')
-})
-btnClose.addEventListener('click', () => {
-  document.getElementById('sidebar').classList.remove('sidebar--open')
-})
+const brandsSlider = new Slider('.slider-container--brands')
+const techniquesSlider = new Slider('.slider-container--techniques')
+const priceListSlider = new Slider('.slider-container--price-list')

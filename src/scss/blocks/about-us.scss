@@ -4,7 +4,6 @@
   padding: 0 16px;
 
   @media (min-width: 768px) {
-    height: 208px;
     display: flex;
     column-gap: 6%;
     &--text {
@@ -14,9 +13,14 @@
     &--img {
       min-width: 360px;
       width: auto;
+      object-fit: scale-down;
     }
   }
   &__button {
+    &__button.expanded img {
+      transform: rotate(180deg);
+      transition: transform 0.5s ease-in-out;
+    }
     @media (min-width: 768px) {
       position: absolute;
       left: 16px;
@@ -24,8 +28,23 @@
     }
   }
   &--text {
-    height: calc(100% - 48px);
+    max-height: 462px;
     overflow-y: hidden;
+    .hidden-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .hidden {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .hidden.show {
+      opacity: 1;
+    }
+
     p {
       font: 14px/18px 0.2px $textColorMain;
       @media (min-width: 768px) {
