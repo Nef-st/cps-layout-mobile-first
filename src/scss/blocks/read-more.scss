@@ -1,0 +1,13 @@
+.read-more {
+  &__list {
+    .hidden {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      &.show {
+        opacity: 1;
+      }
+    }
+  }
+}

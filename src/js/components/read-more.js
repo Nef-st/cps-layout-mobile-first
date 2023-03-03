@@ -1,26 +1,40 @@
-function readMore() {
-  const button = document.querySelector('.about-us__button')
-  const hiddenContainer = document.querySelector('.hidden-container')
-  const hiddenElements = hiddenContainer.querySelectorAll('.hidden')
+class ReadMore {
+  constructor(section) {
+    this.list = document.querySelector(section)
+    this.button = this.list.querySelector('.read-more__button')
+    this.listElements = this.list.querySelector('.read-more__list')
+    this.hiddenElements = this.listElements.querySelectorAll('.hidden')
 
-  if (hiddenContainer.style.maxHeight) {
-    hiddenContainer.style.maxHeight = null
-    button.innerHTML =
-      '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/><p>Читать далее</p>'
-    hiddenElements.forEach((element) => {
-      element.style.opacity = 0
-      element.style.transform = 'translateY(-10px)'
-    })
-  } else {
-    hiddenContainer.style.maxHeight = 462 + 'px'
-    hiddenContainer.style.height = 462 + 'px'
-    button.innerHTML =
+    this.button.addEventListener('click', this.toggleReadMore.bind(this))
+  }
+
+  toggleReadMore() {
+    if (this.hiddenElements[1].style.maxHeight) {
+      this.hideReadMore()
+    } else {
+      this.showReadMore()
+    }
+  }
+
+  showReadMore() {
+    this.button.innerHTML =
       '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/><p>Свернуть</p>'
-    hiddenElements.forEach((element) => {
+    this.hiddenElements.forEach((element) => {
+      element.style.maxHeight = 100 + '%'
       element.style.opacity = 1
       element.style.transform = 'translateY(0)'
     })
   }
+
+  hideReadMore() {
+    this.button.innerHTML =
+      '<img width="24px" height="24px" src="./img/button-expand.svg" alt="|"/><p>Читать далее</p>'
+    this.hiddenElements.forEach((element) => {
+      element.style.maxHeight = null
+      element.style.opacity = 0
+      element.style.transform = 'translateY(-10px)'
+    })
+  }
 }
 
-document.querySelector('.about-us__button').addEventListener('click', readMore)
+new ReadMore('.about-us')
