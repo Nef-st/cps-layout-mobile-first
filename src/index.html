@@ -8,12 +8,6 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>cps website</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <aside class="sidebar" id="sidebar">
@@ -155,36 +149,39 @@
           </ul>
           <div class="main-nav__fade"></div>
         </nav>
-        <section class="about-us read-more">
-          <div class="about-us--text read-more__list">
-            <div>
-              <p>
-                Мы являемся авторизованным сервисным центром по ремонту техники
-                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-                официальной гарантией производителя.
-              </p>
-              <br />
-            </div>
-            <div class="hidden">
-              <p>
-                Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                партнера, что подтверждает большое количество постоянных
-                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
-                и, в свою очередь, советуют нас родным и близким.
-              </p>
-              <br />
-            </div>
-            <div class="hidden">
-              <p>
-                Наш сервисный центр также предоставляет услуги по обслуживанию и
-                ремонту других брендов ноутбуков и компьютеров. Мы обладаем
-                большим опытом и знаниями в этой области и гарантируем высокое
-                качество работы.
-              </p>
-              <br />
+        <section class="about-us">
+          <div class="read-more">
+            <div class="about-us--text read-more__list">
+              <div>
+                <p>
+                  Мы являемся авторизованным сервисным центром по ремонту
+                  техники Dell. Только у нас вы можете отремонтировать свой
+                  ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <br />
+              </div>
+              <div class="hidden">
+                <p>
+                  Мы успешно работаем с 1992 года и заслужили репутацию
+                  надежного партнера, что подтверждает большое количество
+                  постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+                  рекомендациям и, в свою очередь, советуют нас родным и
+                  близким.
+                </p>
+                <br />
+              </div>
+              <div class="hidden">
+                <p>
+                  Наш сервисный центр также предоставляет услуги по обслуживанию
+                  и ремонту других брендов ноутбуков и компьютеров. Мы обладаем
+                  большим опытом и знаниями в этой области и гарантируем высокое
+                  качество работы.
+                </p>
+                <br />
+              </div>
             </div>
             <div
-              class="about-us__button read-more__button button button--name--read-more"
+              class="about-us--button read-more__button button button--name--read-more"
             >
               <img
                 wight="24px"
@@ -210,7 +207,6 @@
               Ремонт техники различных брендов
             </p>
           </header>
-          <div class="brands__swiper--fade"></div>
           <div class="slider__container slider__container--brands">
             <div class="slider">
               <div class="slider__item brands__item">
@@ -294,7 +290,7 @@
                 </a>
               </div>
             </div>
-            <div class="slider__pagination brands__swiper--pagination">
+            <div class="slider__pagination">
               <span class="slider__dot"></span>
               <span class="slider__dot"></span>
               <span class="slider__dot"></span>
@@ -523,18 +519,5 @@
         </footer>
       </main>
     </div>
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        spaceBetween: 16,
-        slidesPerView: 2,
-        loop: true,
-        pagination: {
-          el: '.slider__pagination',
-          clickable: true
-        },
-        mousewheel: true,
-        keyboard: true
-      })
-    </script>
   </body>
 </html>

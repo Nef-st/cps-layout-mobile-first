@@ -32,7 +32,7 @@ class ReadMore {
     this.hiddenElements.forEach((element) => {
       element.style.maxHeight = null
       element.style.opacity = 0
-      element.style.transform = 'translateY(-10px)'
+      element.style.transform = 'translateY(-100px)'
     })
   }
 }

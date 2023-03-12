@@ -4,6 +4,8 @@ import './components/read-more'
 
 import '../scss/style.scss'
 
-const brandsSlider = new Slider('.slider__container--brands')
-const techniquesSlider = new Slider('.slider__container--techniques')
-const priceListSlider = new Slider('.slider__container--price-list')
+const sliders = {}
+
+sliders['brands'] = new Slider('.slider__container--brands')
+sliders['techniques'] = new Slider('.slider__container--techniques')
+sliders['priceList'] = new Slider('.slider__container--price-list')

@@ -16,20 +16,12 @@
       object-fit: scale-down;
     }
   }
-  &__button {
-    &__button.expanded img {
-      transform: rotate(180deg);
-      transition: transform 0.5s ease-in-out;
-    }
-    @media (min-width: 768px) {
-      position: absolute;
-      left: 16px;
-      bottom: 0;
-    }
-  }
   &--text {
     p {
-      font: 14px/18px 0.2px $textColorMain;
+      font-size: 14px; /* размер шрифта */
+      line-height: 18px; /* межстрочный интервал */
+      letter-spacing: 0.2px;
+      color: $textColorMain;
       @media (min-width: 768px) {
         line-height: 20px;
       }

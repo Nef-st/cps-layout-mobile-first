@@ -18,14 +18,37 @@ class Slider {
     this.handleTouchStart = this.handleTouchStart.bind(this)
     this.handleTouchMove = this.handleTouchMove.bind(this)
     this.handleTouchEnd = this.handleTouchEnd.bind(this)
+    this.handleResize = this.handleResize.bind(this)
 
-    // добавление обработчиков событий
+    window.addEventListener('resize', this.handleResize)
+
+    this.dots[this.currentSlide].classList.add('active')
+    this.handleResize()
+  }
+
+  // добавление обработчиков событий
+  addListeners() {
     this.dotContainer.addEventListener('click', this.handleDotClick)
     this.slider.addEventListener('touchstart', this.handleTouchStart)
     this.slider.addEventListener('touchmove', this.handleTouchMove)
     this.slider.addEventListener('touchend', this.handleTouchEnd)
+  }
 
-    this.dots[this.currentSlide].classList.add('active')
+  // удаление обработчиков событий
+  removeListeners() {
+    this.dotContainer.removeEventListener('click', this.handleDotClick)
+    this.slider.removeEventListener('touchstart', this.handleTouchStart)
+    this.slider.removeEventListener('touchmove', this.handleTouchMove)
+    this.slider.removeEventListener('touchend', this.handleTouchEnd)
+  }
+
+  handleResize() {
+    if (window.innerWidth < 768) {
+      this.addListeners()
+    } else {
+      this.moveSlider(0)
+      this.removeListeners()
+    }
   }
 
   moveSlider(index) {
