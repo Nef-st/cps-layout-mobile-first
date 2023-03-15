@@ -1,15 +1,17 @@
 class ReadMore {
   constructor(section) {
     this.list = document.querySelector(section)
-    this.button = this.list.querySelector('.read-more__button')
+    this.button = this.list.querySelector('.button--name--read-more')
     this.listElements = this.list.querySelector('.read-more__list')
     this.hiddenElements = this.listElements.querySelectorAll('.hidden')
 
-    this.button.addEventListener('click', this.toggleReadMore.bind(this))
+    this.toggleReadMore = this.toggleReadMore.bind(this)
+
+    this.button.addEventListener('click', this.toggleReadMore)
   }
 
   toggleReadMore() {
-    if (this.hiddenElements[1].style.maxHeight) {
+    if (this.hiddenElements[0].style.maxHeight) {
       this.hideReadMore()
     } else {
       this.showReadMore()
@@ -37,4 +39,4 @@ class ReadMore {
   }
 }
 
-new ReadMore('.about-us')
+export default ReadMore
