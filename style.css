@@ -34,6 +34,7 @@
   font-style: normal;
 }
 
+@charset "UTF-8";
 .sidebar {
   position: absolute;
   top: 0;
@@ -167,6 +168,7 @@
   height: 88px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 16px;
   background-color: #ffffff;
@@ -181,16 +183,16 @@
   display: flex;
   align-items: center;
 }
-.header .button--name--repair {
-  margin: 0 16px 0 20px;
-}
-.header__logo {
-  margin: 0 16px 0 auto;
+.header .button--name--burger {
+  margin-right: 16px;
 }
 @media (min-width: 768px) {
-  .header__logo {
-    margin-left: 0;
+  .header .button--name--burger {
+    margin: 0;
   }
+}
+.header .button--name--repair {
+  margin: 0 16px 0 20px;
 }
 .header__divider {
   width: 2px;
@@ -304,35 +306,11 @@
     object-fit: scale-down;
   }
 }
-.about-us__button__button.expanded img {
-  transform: rotate(180deg);
-  transition: transform 0.5s ease-in-out;
-}
-@media (min-width: 768px) {
-  .about-us__button {
-    position: absolute;
-    left: 16px;
-    bottom: 0;
-  }
-}
-.about-us--text {
-  max-height: 462px;
-  overflow-y: hidden;
-}
-.about-us--text .hidden-container {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-.about-us--text .hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-.about-us--text .hidden.show {
-  opacity: 1;
-}
 .about-us--text p {
-  font: 14px/18px 0.2px #1b1c21;
+  font-size: 14px; /* размер шрифта */
+  line-height: 18px; /* межстрочный интервал */
+  letter-spacing: 0.2px;
+  color: #1b1c21;
 }
 @media (min-width: 768px) {
   .about-us--text p {
@@ -345,19 +323,9 @@
   margin-bottom: 24px;
   overflow: hidden;
   width: 100%;
-  height: 196px;
-}
-.brands__swiper--fade {
-  position: absolute;
-  z-index: 2;
-  top: 86px;
-  right: 0;
-  width: 24px;
-  height: 72px;
-  background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%);
 }
 .brands__item--link {
-  width: 240px;
+  width: 216px;
   height: 72px;
   box-sizing: border-box;
   display: flex;
@@ -383,7 +351,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 240px;
+  width: 216px;
   height: 160px;
   padding: 16px;
   background: #ffffff;
@@ -401,8 +369,76 @@
 .price__list {
   display: flex;
 }
+@media (min-width: 768px) {
+  .price__list {
+    background: #ffffff;
+    border-radius: 6px;
+  }
+}
+.price__list tbody {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .price__list tbody {
+    flex-wrap: wrap;
+  }
+}
+.price__list tbody tr {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: #eaeaea 1px solid;
+}
+@media (min-width: 768px) {
+  .price__list tbody tr {
+    height: 64px;
+    flex-wrap: nowrap;
+  }
+}
+.price__list tbody td {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .price__list tbody td {
+    position: relative;
+  }
+  .price__list tbody td:nth-child(1), .price__list tbody td:nth-child(3), .price__list tbody td:nth-child(5) {
+    display: none;
+  }
+  .price__list tbody td:nth-child(2) {
+    min-width: 40%;
+    margin-right: auto;
+  }
+  .price__list tbody td:nth-child(4), .price__list tbody td:nth-child(6), .price__list tbody td:nth-child(7) {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    min-width: 120px;
+  }
+}
 .price__list--item {
-  width: 260px !important;
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 200px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.price__list--item img {
+  margin-top: auto;
+}
+@media (min-width: 768px) {
+  .price__list--item {
+    width: 100%;
+    padding: 23px;
+    margin-bottom: 0 !important;
+    border: none;
+    background: none;
+    border-radius: none;
+  }
 }
 .price__list--text {
   font-family: "TT Lakes";
@@ -426,6 +462,11 @@
   color: #1b1c21;
   margin-bottom: 16px;
 }
+@media (min-width: 768px) {
+  .price__list--description {
+    margin-bottom: 0;
+  }
+}
 .price__list--description:last-child {
   margin: 0;
 }
@@ -434,19 +475,12 @@
   bottom: 16px;
   right: 16px;
 }
-.price__list--link {
-  position: relative;
-  display: block;
-  width: 260px;
-  height: 200px;
-  padding: 16px;
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
-  text-decoration: none;
-}
-.price__list--link img {
-  margin-top: auto;
+@media (min-width: 768px) {
+  .price__list--button {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 .price__offer {
   margin-top: 16px;
@@ -517,33 +551,55 @@
   color: #7e7e82;
 }
 
-.slider-container {
+.slider__container {
+  padding: 0 16px;
   position: relative;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
 }
-
-.slider {
+@media (min-width: 768px) {
+  .slider__container {
+    padding-left: 24px;
+  }
+}
+.slider__container .button--name--read-more {
+  display: none;
+}
+@media (min-width: 768px) {
+  .slider__container .button--name--read-more {
+    display: flex;
+  }
+}
+.slider__container .slider {
   display: flex;
   transition: transform 0.5s ease;
 }
-
-.slider-item {
-  flex: 0 0 80%;
-  width: 100%;
-  box-sizing: border-box;
+@media (min-width: 768px) {
+  .slider__container .slider {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
-
-.slider-pagination {
+.slider__container .slider__item {
+  margin-right: 16px;
+}
+@media (min-width: 768px) {
+  .slider__container .slider__item {
+    margin-bottom: 16px;
+  }
+}
+.slider__container .slider__pagination {
   display: flex;
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
   margin-top: 16px;
 }
-
-.slider-dot {
+@media (min-width: 768px) {
+  .slider__container .slider__pagination {
+    display: none;
+  }
+}
+.slider__container .slider__dot {
   cursor: pointer;
   display: inline-block;
   width: 12px;
@@ -552,8 +608,18 @@
   background-color: #dddddd;
   transition: background-color 0.2s;
 }
-.slider-dot.active {
+.slider__container .slider__dot.active {
   background-color: #b5b6bc;
+}
+
+.read-more__list .hidden {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.read-more__list .hidden.show {
+  opacity: 1;
 }
 
 .button {
