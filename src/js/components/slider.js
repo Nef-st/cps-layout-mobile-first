@@ -21,13 +21,13 @@ class Slider {
     this.handleResize = this.handleResize.bind(this)
 
     window.addEventListener('resize', this.handleResize)
-
-    this.dots[this.currentSlide].classList.add('active')
     this.handleResize()
   }
 
   // добавление обработчиков событий
   addListeners() {
+    this.dots[this.currentSlide].classList.add('active')
+
     this.dotContainer.addEventListener('click', this.handleDotClick)
     this.slider.addEventListener('touchstart', this.handleTouchStart)
     this.slider.addEventListener('touchmove', this.handleTouchMove)
@@ -44,6 +44,7 @@ class Slider {
 
   handleResize() {
     if (window.innerWidth < 768) {
+      this.slideWidth = this.sliderItems[0].clientWidth
       this.addListeners()
     } else {
       this.moveSlider(0)

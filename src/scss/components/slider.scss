@@ -1,5 +1,5 @@
 .slider__container {
-  padding-left: 16px;
+  padding: 0 16px;
   position: relative;
   width: 100%;
   @media (min-width: 768px) {
@@ -22,9 +22,7 @@
 
     &__item {
       margin-right: 16px;
-      box-sizing: border-box;
       @media (min-width: 768px) {
-        margin-right: 24px;
         margin-bottom: 16px;
       }
     }

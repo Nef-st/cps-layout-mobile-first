@@ -4,8 +4,71 @@
   margin-bottom: 40px;
   &__list {
     display: flex;
+    @media (min-width: 768px) {
+      background: $bgColorAdditional;
+      border-radius: 6px;
+    }
+    tbody {
+      display: flex;
+      @media (min-width: 768px) {
+        flex-wrap: wrap;
+      }
+      tr {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: #eaeaea 1px solid;
+        @media (min-width: 768px) {
+          height: 64px;
+          flex-wrap: nowrap;
+        }
+      }
+      td {
+        width: 100%;
+        @media (min-width: 768px) {
+          position: relative;
+
+          &:nth-child(1),
+          &:nth-child(3),
+          &:nth-child(5) {
+            display: none;
+          }
+          &:nth-child(2) {
+            min-width: 40%;
+            margin-right: auto;
+          }
+          &:nth-child(4),
+          &:nth-child(6),
+          &:nth-child(7) {
+            display: flex;
+            justify-content: center;
+            width: 20%;
+            min-width: 120px;
+          }
+        }
+      }
+    }
     &--item {
+      position: relative;
+      display: block;
       width: 260px;
+      height: 200px;
+      padding: 16px;
+      background: $bgColorAdditional;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+      text-decoration: none;
+      img {
+        margin-top: auto;
+      }
+      @media (min-width: 768px) {
+        width: 100%;
+        padding: 23px;
+        margin-bottom: 0 !important;
+        border: none;
+        background: none;
+        border-radius: none;
+      }
     }
     &--text {
       font-family: 'TT Lakes';
@@ -28,6 +91,9 @@
       letter-spacing: 0.2px;
       color: $textColorMain;
       margin-bottom: 16px;
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
       &:last-child {
         margin: 0;
       }
@@ -36,19 +102,10 @@
       position: absolute;
       bottom: 16px;
       right: 16px;
-    }
-    &--link {
-      position: relative;
-      display: block;
-      width: 260px;
-      height: 200px;
-      padding: 16px;
-      background: $bgColorAdditional;
-      border: 1px solid $colorBordermySwiper;
-      border-radius: 6px;
-      text-decoration: none;
-      img {
-        margin-top: auto;
+      @media (min-width: 768px) {
+        position: relative;
+        top: 0;
+        left: 0;
       }
     }
   }
