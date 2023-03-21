@@ -1,14 +1,18 @@
 .about-us {
   position: relative;
   margin-bottom: 24px;
-  padding: 0 16px;
+  padding: 0 24px;
 
   @media (min-width: 768px) {
     display: flex;
     column-gap: 6%;
     &--text {
       min-width: 312px;
-      width: 47%;
+
+      @media (min-width: 1440px) {
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
     }
     &--img {
       min-width: 360px;

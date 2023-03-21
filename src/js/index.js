@@ -11,6 +11,9 @@ sliders['brands'] = new Slider('.slider__container--brands')
 sliders['techniques'] = new Slider('.slider__container--techniques')
 sliders['priceList'] = new Slider('.slider__container--price')
 
-readMoreLists['about-us'] = new ReadMore('.about-us')
-readMoreLists['brands'] = new ReadMore('.slider__container--brands')
-readMoreLists['technique'] = new ReadMore('.slider__container--techniques')
+readMoreLists['about-us'] = new ReadMore('.about-us', 'text')
+readMoreLists['brands'] = new ReadMore('.slider__container--brands', 'text')
+readMoreLists['technique'] = new ReadMore(
+  '.slider__container--techniques',
+  'text'
+)

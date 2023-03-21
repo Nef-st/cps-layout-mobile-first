@@ -13,8 +13,8 @@
   padding: 0 16px;
   background-color: $bgColorAdditional;
   border-bottom: 1px solid #d9fff5;
-  @media (min-width: 768px) {
-    justify-content: space-between;
+  @media (min-width: 1440px) {
+    display: none;
   }
   &--content {
     display: flex;

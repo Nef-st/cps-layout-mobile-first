@@ -5,6 +5,13 @@
   width: 100vw;
   overflow: hidden;
 
+  @media (min-width: 1440px) {
+    margin-top: 0;
+    margin-left: 320px;
+    width: 75%;
+    max-width: 1500px;
+  }
+
   &__header {
     position: relative;
     margin: 24px 0;
