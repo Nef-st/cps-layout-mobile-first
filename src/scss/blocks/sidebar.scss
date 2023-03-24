@@ -4,6 +4,7 @@
   background-color: $bgColorAdditional;
   transition: transform 0.5s;
   transform: translateX(-360px);
+  display: none;
 
   &--open {
     display: block;
