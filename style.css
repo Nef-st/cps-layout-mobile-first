@@ -39,6 +39,7 @@
   background-color: #ffffff;
   transition: transform 0.5s;
   transform: translateX(-360px);
+  display: none;
 }
 .sidebar--open {
   display: block;
@@ -307,6 +308,10 @@
   position: relative;
   margin-bottom: 24px;
   padding: 0 24px;
+}
+.about-us--text {
+  min-width: 312px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .about-us {
@@ -639,8 +644,12 @@
 
 .read-more__list {
   transition: height 0.5s ease-out;
-  overflow: hidden;
-  height: 160px;
+  align-content: flex-start;
+}
+@media (min-width: 768px) {
+  .read-more__list {
+    overflow-y: hidden;
+  }
 }
 
 .button {
@@ -686,7 +695,7 @@
   display: flex;
   align-items: center;
   height: 48px;
-  width: 132px;
+  width: 100%;
   -moz-column-gap: 8px;
        column-gap: 8px;
   border: 0;
