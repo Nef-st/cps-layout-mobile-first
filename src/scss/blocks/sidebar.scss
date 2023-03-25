@@ -5,20 +5,27 @@
   transition: transform 0.5s;
   transform: translateX(-360px);
   display: none;
+  height: 100vh;
+  overflow: scroll;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &--open {
     display: block;
-    height: 100vh;
-    overflow: scroll;
+
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     transform: translateX(0);
-    width: 320px;
+    width: 100%;
 
-    @media (max-width: 360px) {
-      width: 100%;
+    @media (min-width: 430px) {
+      width: 320px;
     }
 
     & ~ .container {

@@ -4,13 +4,13 @@
   margin-bottom: 40px;
   &__list {
     display: flex;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       background: $bgColorAdditional;
       border-radius: 6px;
     }
     tbody {
       display: flex;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         flex-wrap: wrap;
       }
       tr {
@@ -18,14 +18,14 @@
         align-items: center;
         flex-wrap: wrap;
         border-bottom: #eaeaea 1px solid;
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
           height: 64px;
           flex-wrap: nowrap;
         }
       }
       td {
         width: 100%;
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
           position: relative;
 
           &:nth-child(1),
@@ -61,7 +61,7 @@
       img {
         margin-top: auto;
       }
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         width: 100%;
         padding: 23px;
         margin-bottom: 0 !important;
@@ -91,7 +91,7 @@
       letter-spacing: 0.2px;
       color: $textColorMain;
       margin-bottom: 16px;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         margin-bottom: 0;
       }
       &:last-child {
@@ -102,7 +102,7 @@
       position: absolute;
       bottom: 16px;
       right: 16px;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         position: relative;
         top: 0;
         left: 0;

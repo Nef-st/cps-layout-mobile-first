@@ -22,7 +22,7 @@
   }
   .button--name--burger {
     margin-right: 16px;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       margin: 0;
     }
   }
@@ -38,7 +38,7 @@
 
     &--left {
       display: none;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         display: block;
         margin: 0 20px;
       }

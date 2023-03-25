@@ -2,12 +2,12 @@
   padding: 0 16px;
   position: relative;
   width: 100%;
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     padding-left: 24px;
   }
   & .button--name--read-more {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       display: flex;
     }
   }
@@ -15,14 +15,14 @@
   .slider {
     display: flex;
     transition: transform 0.5s ease;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       flex-wrap: wrap;
       justify-content: center;
     }
 
     &__item {
       margin-right: 16px;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         margin-bottom: 16px;
       }
     }
@@ -32,7 +32,7 @@
       justify-content: center;
       column-gap: 12px;
       margin-top: 16px;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         display: none;
       }
     }

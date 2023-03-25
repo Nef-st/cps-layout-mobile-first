@@ -2,7 +2,7 @@
   &__list {
     transition: height 0.5s ease-out;
     align-content: flex-start;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       overflow-y: hidden;
     }
   }

@@ -43,7 +43,7 @@ class Slider {
   }
 
   handleResize() {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 769) {
       this.slideWidth = this.sliderItems[0].clientWidth
       this.addListeners()
     } else {

@@ -16,7 +16,7 @@ class ReadMore {
   }
 
   resize() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 769) {
       this.listHeight = '10rem'
     } else {
       this.listHeight = '8rem'
