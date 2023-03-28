@@ -3,6 +3,18 @@
 .footer {
   text-align: center;
   padding-top: 17px;
+  border-top: 1px #d9fff5 solid;
+
+  @media (min-width: 769px) {
+    display: flex;
+    height: 105px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px;
+  }
+  @media (min-width: 1440px) {
+    margin: 0 32px;
+  }
   p {
     margin-bottom: 16px;
     font-size: 14px;
@@ -13,6 +25,20 @@
     opacity: 0.72;
     &:last-child {
       margin-bottom: 19px;
+    }
+    @media (min-width: 769px) {
+      margin-right: 35px;
+
+      &:first-child {
+        text-align: start;
+      }
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:last-child {
+        text-align: end;
+        margin-right: 0;
+      }
     }
   }
 }

@@ -6,7 +6,7 @@
 
   &__link-list {
     height: 40px;
-    margin: 0;
+    margin-left: 16px;
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -21,15 +21,10 @@
     }
   }
 
-  li:first-of-type {
-    margin-left: 16px;
-  }
-
   &__link {
     display: block;
-    width: 246px;
     height: 40px;
-    padding: 8px 13px;
+    padding: 8px 21px;
     text-decoration: none;
     box-sizing: border-box;
 

@@ -14,20 +14,30 @@
   background-color: $bgColorAdditional;
   border-bottom: 1px solid #d9fff5;
   @media (min-width: 1440px) {
-    display: none;
+    position: absolute;
+    background: none;
+    border: none;
+    padding-right: 30px;
   }
   &--content {
     display: flex;
     align-items: center;
   }
-  .button--name--burger {
-    margin-right: 16px;
-    @media (min-width: 769px) {
-      margin: 0;
+
+  &__button {
+    display: flex;
+    text-decoration: none;
+
+    p {
+      display: none;
+
+      @media (min-width: 1440px) {
+        display: inherit;
+        align-items: center;
+        margin: 0 8px 0 32px;
+        color: #1b1c21;
+      }
     }
-  }
-  .button--name--repair {
-    margin: 0 16px 0 20px;
   }
 
   &__divider {
@@ -35,6 +45,10 @@
     height: 32px;
     background: #eaeaea;
     border-radius: 1px;
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
 
     &--left {
       display: none;

@@ -19,6 +19,9 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+    @media (min-width: 1440px) {
+      justify-content: start;
+    }
 
     &__item {
       margin-right: 16px;

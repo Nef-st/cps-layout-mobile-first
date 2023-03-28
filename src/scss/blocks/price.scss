@@ -112,6 +112,13 @@
   &__offer {
     margin-top: 16px;
     width: 100%;
+    @media (min-width: 769px) {
+      width: 421px;
+      margin: 24px auto 16px 24px;
+    }
+    @media (min-width: 1440px) {
+      margin: 32px auto 8px 32px;
+    }
     &--text {
       font-size: 14px;
       line-height: 20px;
