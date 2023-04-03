@@ -1,11 +1,9 @@
-@import '../var.scss';
-
 .price {
   margin-bottom: 40px;
   &__list {
     display: flex;
     @media (min-width: 769px) {
-      background: $bgColorAdditional;
+      background: #fff;
       border-radius: 6px;
     }
     tbody {
@@ -54,7 +52,7 @@
       width: 260px;
       height: 200px;
       padding: 16px;
-      background: $bgColorAdditional;
+      background: #fff;
       border: 1px solid #eaeaea;
       border-radius: 6px;
       text-decoration: none;
@@ -75,12 +73,12 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
-      color: $textColorMain;
+      color: #1b1c21;
     }
     &--header {
       font-size: 14px;
       line-height: 16px;
-      color: $textColorAdditional;
+      color: #7e7e82;
       mix-blend-mode: normal;
       opacity: 0.72;
       margin-bottom: 4px;
@@ -89,7 +87,7 @@
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.2px;
-      color: $textColorMain;
+      color: #1b1c21;
       margin-bottom: 16px;
       @media (min-width: 769px) {
         margin-bottom: 0;
@@ -123,7 +121,7 @@
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.2px;
-      color: $textColorMain;
+      color: #1b1c21;
       margin: 0 16px;
       margin-bottom: 16px;
     }
@@ -133,7 +131,7 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
-      color: $textColorMain;
+      color: #1b1c21;
       text-decoration: none;
       margin: 0 16px;
       span {

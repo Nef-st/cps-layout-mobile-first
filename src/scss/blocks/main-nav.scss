@@ -1,13 +1,11 @@
-@import '../var.scss';
-
 .main-nav {
   position: relative;
   margin: 24px 0;
 
   &__link-list {
+    display: flex;
     height: 40px;
     margin-left: 16px;
-    display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -15,9 +13,13 @@
       display: none;
     }
     @media (min-width: 1440px) {
+      display: flex;
       height: auto;
       overflow: auto;
       flex-wrap: wrap;
+    }
+    & li {
+      display: inline;
     }
   }
 
@@ -30,7 +32,7 @@
 
     &--active {
       background-color: #fff;
-      border: 2px solid $colorBorder;
+      border: 2px solid #b8ffec;
       border-radius: 6px;
     }
 
@@ -39,7 +41,7 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
-      color: $textColorAdditional;
+      color: #7e7e82;
     }
   }
 

@@ -1,4 +1,15 @@
-@import './blocks/sidebar.scss';
+// global
+@import '../fonts/fonts.css';
+
+// components
+@import './components/modal.scss';
+@import './components/section-header.scss';
+@import './components/slider.scss';
+@import './components/read-more.scss';
+@import './components/button.scss';
+@import './components/blackout.scss';
+
+// blocks
 @import './blocks/header.scss';
 @import './blocks/main.scss';
 @import './blocks/main-nav.scss';
@@ -7,14 +18,6 @@
 @import './blocks/technique.scss';
 @import './blocks/price.scss';
 @import './blocks/footer.scss';
-
-@import './components/section-header.scss';
-@import './components/slider.scss';
-@import './components/read-more.scss';
-@import './components/button.scss';
-
-@import '../fonts/fonts.css';
-@import './var.scss';
 
 * {
   box-sizing: border-box;
@@ -26,7 +29,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  background-color: $bgColorMain;
+  background-color: #f8f8f8;
 }
 p {
   margin: 0;
