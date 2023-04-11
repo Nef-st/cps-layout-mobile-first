@@ -16,8 +16,14 @@
         </div>
         <div class="header--content">
           <div class="header__divider header__divider--right"></div>
-          <a href="#" class="button button--name--repair"></a>
-          <a href="#" class="button button--name--checkstatus"></a>
+          <div class="button header__button" id="button--name--repair">
+            <p>Оставить заявку</p>
+            <div class="button--name--repair"></div>
+          </div>
+          <div class="button header__button" id="button--name--checkstatus">
+            <p>Статус ремонта</p>
+            <div class="button--name--checkstatus"></div>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -423,17 +429,17 @@
         </footer>
       </main>
     </div>
-    <aside class="sidebar" id="sidebar">
-      <header class="sidebar__header">
-        <div class="sidebar__header--left">
-          <div class="button button--name--close" id="button-close"></div>
+    <div class="modal__sidebar" id="modal__sidebar">
+      <header class="modal__sidebar__header">
+        <div class="modal__sidebar__header--left">
+          <div class="button button--name--close button-close"></div>
           <img width="103px" height="55px" src="img/logo.svg" alt="logo">
         </div>
 
         <div class="button button--name--search"></div>
       </header>
 
-      <nav class="sidebar__nav">
+      <nav class="modal__sidebar__nav">
         <ul class="link-list">
           <li class="link-list__item">
             <a href="#">Ремонт техники </a>
@@ -469,8 +475,8 @@
         </ul>
       </nav>
 
-      <footer class="sidebar__footer">
-        <ul class="sidebar__messenger messenger">
+      <footer class="modal__sidebar__footer">
+        <ul class="modal__sidebar__messenger">
           <li>
             <div class="button button--name--phone"></div>
           </li>
@@ -484,25 +490,80 @@
           </li>
         </ul>
 
-        <p class="sidebar__footer--email">mail@cps.com </p>
+        <p class="modal__sidebar__footer--email">mail@cps.com </p>
 
-        <p class="sidebar__footer--number">8 800 890 8900 </p>
+        <p class="modal__sidebar__footer--number">8 800 890 8900 </p>
 
-        <ul class="sidebar__language language">
-          <li class="language__button active">
+        <ul class="modal__sidebar__language">
+          <li class="active">
             <a href="#">RU </a>
           </li>
 
-          <li class="language__button">
+          <li>
             <a href="#">EN </a>
           </li>
 
-          <li class="language__button">
+          <li>
             <a href="#">CH </a>
           </li>
         </ul>
       </footer>
-    </aside>
-    <div class="sidebar__background" id="sidebar__background"></div>
+    </div>
+    <div class="modal__callback" id="modal__repair">
+      <div class="button button--name--close modal__callback--close button-close">
+      </div>
+      <form class="form" action="post">
+        <label class="form--title">
+          <h1>Обратная связь</h1>
+        </label>
+        <label class="form--label-input">
+          <input class="form--input" type="text" placeholder="Имя" name="name">
+        </label>
+        <label class="form--label-input">
+          <input class="form--input" type="tel" placeholder="Телефон" name="tel">
+        </label>
+        <label class="form--label-input">
+          <input class="form--input" type="email" placeholder="Электронная почта" name="email">
+        </label>
+        <label class="form--label-input">
+          <input id="text" class="form--input" type="email" placeholder="Сообщение" name="text">
+        </label>
+        <label class="form--offer">
+          <p>Нажимая “отправить”, вы даете согласие на
+            <span>обработку персональных данных</span> и соглашаетесь с нашей
+            <span>политикой конфиденциальности</span></p>
+        </label>
+        <label class="form--label-button">
+          <div class="button button--name--order">
+            <p>Отправить</p>
+            <img width="24px" height="24px" src="./img/button-goside.svg" alt="go">
+          </div>
+        </label>
+      </form>
+    </div>
+    <div class="modal__callback" id="modal__checkstatus">
+      <div class="button button--name--close modal__callback--close button-close">
+      </div>
+      <form class="form" action="post">
+        <label class="form--title">
+          <h1>Заказать звонок</h1>
+        </label>
+        <label class="form--label-input">
+          <input class="form--input" type="tel" placeholder="Телефон" name="tel">
+        </label>
+        <label class="form--offer">
+          <p>Нажимая “отправить”, вы даете согласие на
+            <span>обработку персональных данных</span> и соглашаетесь с нашей
+            <span>политикой конфиденциальности</span></p>
+        </label>
+        <label class="form--label-button">
+          <div class="button button--name--order">
+            <p>Отправить</p>
+            <img width="24px" height="24px" src="./img/button-goside.svg" alt="go">
+          </div>
+        </label>
+      </form>
+    </div>
+    <div id="blackout"></div>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
